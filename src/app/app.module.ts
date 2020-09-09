@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ImageComponent } from './image/image.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    ImageCropperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

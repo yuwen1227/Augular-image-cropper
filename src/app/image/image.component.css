@@ -1,0 +1,21 @@
+.img:hover {
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px#888;
+  box-shadow: 0 0 5px 5px #888;
+}
+
+.square {
+  background-color: #fff;
+  border: 5px rgb(184, 182, 182) solid;
+  border-radius: 1%;
+  width:fit-content;
+}
+
+.square:hover {
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px#888;
+  box-shadow: 0 0 5px 5px #888;
+}
+
+
+

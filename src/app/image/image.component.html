@@ -1,0 +1,39 @@
+<!-- <div>
+  <img class="img" src='assets/images/cute.jpg' (click)="open(content)" width="50%">
+</div> -->
+<br>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">剪裁圖片</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="4 / 3"
+    format="png" (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()" width="100%">
+  </image-cropper>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<!-- 上傳照片 -->
+<div class="square">
+  <div>
+    <img [src]=' croppedImage' />
+  </div>
+  <div class="croppedimg">
+    <input type="file" (change)="fileChangeEvent($event)" (click)="open(content)" />
+  </div>
+</div>
+
+<!-- 顯示被裁切的照片 -->
+<!-- <img [src]=' croppedImage' /> -->
