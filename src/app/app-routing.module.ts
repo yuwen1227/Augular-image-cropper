@@ -4,9 +4,9 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  // { path: 'image', component: ImageComponent },
-  // { path: 'signatured', component: SignaturedComponent, }
-  { path: '', component: ImageComponent }
+  { path: '', component: ImageComponent, pathMatch: 'full' },
+  { path: 'image', component: ImageComponent },
+  { path: 'signatured', component: SignaturedComponent, }
 ];
 
 @NgModule({

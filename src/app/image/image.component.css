@@ -41,7 +41,7 @@
 }
 
 @media(max-width: 575px) {
-  img {
+  img{
     width: 100%;
   }
 }

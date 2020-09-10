@@ -3,7 +3,7 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-signatured',
   templateUrl: './signatured.component.html',
-  styleUrls: ['./signatured.component.css']
+  styleUrls: ['./signatured.component.css'],
 })
 export class SignaturedComponent implements OnInit {
 

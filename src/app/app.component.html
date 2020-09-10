@@ -1,1 +1,15 @@
-<app-image></app-image>
+<nav class="menu">
+  <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>功能</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem> <a routerLink="/image">上傳圖片</a></button>
+          <button ngbDropdownItem><a routerLink="/signatured">彈跳視窗</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<!-- <app-image></app-image> -->

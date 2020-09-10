@@ -1,7 +1,7 @@
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ImageTransform } from './interfaces/image-transform.interface';
+import { ImageTransform } from '../interfaces/image-transform.interface';
 
 @Component({
   selector: 'app-image',

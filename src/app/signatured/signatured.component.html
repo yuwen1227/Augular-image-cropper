@@ -1,4 +1,4 @@
-<button (click)="open(content)">簽名</button>
+<button (click)="open(content)">open</button>
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">簽名</h4>
@@ -7,9 +7,9 @@
     </button>
   </div>
   <div class="modal-body">
-    <!-- <signature-pad [options]="signaturePadOptions"  id="signatureCanvas"></signature-pad> -->
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
   </div>
 </ng-template>
+

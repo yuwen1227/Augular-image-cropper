@@ -1,8 +1,7 @@
 <!-- <div>
   <img class="img" src='assets/images/cute.jpg' (click)="open(content)" width="50%">
 </div> -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-<ng-template #content let-c="close" let-d="dismiss">
+<ng-template #content let-c="close" let-d="dismiss" class="window">
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">剪裁圖片</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
@@ -18,7 +17,7 @@
     <image-cropper id="ImageInDiv" [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true"
       [aspectRatio]="4 / 3" format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
       (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()" [canvasRotation]="canvasRotation"
-      width="100%">
+      >
     </image-cropper>
   </div>
   <div class="modal-footer">

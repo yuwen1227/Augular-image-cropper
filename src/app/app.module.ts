@@ -8,7 +8,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { SignaturedComponent } from './signatured/signatured.component';
-import { SignaturePadModule } from 'angular2-signaturepad';
 
 
 
@@ -23,7 +22,6 @@ import { SignaturePadModule } from 'angular2-signaturepad';
     AppRoutingModule,
     NgbModule,
     ImageCropperModule,
-    SignaturePadModule,
 
   ],
   providers: [],
