@@ -8,7 +8,7 @@
   background-color: #fff;
   border: 5px rgb(184, 182, 182) solid;
   border-radius: 1%;
-  width:fit-content;
+  width: fit-content;
 }
 
 .square:hover {
@@ -17,5 +17,42 @@
   box-shadow: 0 0 5px 5px #888;
 }
 
+.img {
+  animation: rotation 5s infinite linear;
+}
 
+.left:hover,
+.right:hover,
+.zoomin:hover,
+.zoomout:hover {
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px#888;
+  box-shadow: 0 0 5px 5px #888;
+}
 
+.rotate {
+  display: flex;
+  width: fit-content;
+  display: inline-block;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+@media(max-width: 575px) {
+  img {
+    width: 100%;
+  }
+}
+
+/* 旋轉動畫 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}

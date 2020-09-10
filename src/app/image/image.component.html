@@ -1,7 +1,7 @@
 <!-- <div>
   <img class="img" src='assets/images/cute.jpg' (click)="open(content)" width="50%">
 </div> -->
-<br>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">剪裁圖片</h4>
@@ -10,26 +10,28 @@
     </button>
   </div>
   <div class="modal-body">
-    <image-cropper
-    [imageChangedEvent]="imageChangedEvent"
-    [maintainAspectRatio]="true"
-    [aspectRatio]="4 / 3"
-    format="png" (imageCropped)="imageCropped($event)"
-    (imageLoaded)="imageLoaded()"
-    (cropperReady)="cropperReady()"
-    (loadImageFailed)="loadImageFailed()" width="100%">
-  </image-cropper>
+    <div class="rotate">
+      <img class="left" src="assets/images/left.png" (click)="left()">
+      <img class="right" src="assets/images/right.png" (click)="right()">
+      <img class="zoomout" src="assets/images/reset.png" (click)="resetImage()">
+    </div>
+    <image-cropper id="ImageInDiv" [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true"
+      [aspectRatio]="4 / 3" format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
+      (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()" [canvasRotation]="canvasRotation"
+      width="100%">
+    </image-cropper>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
   </div>
 </ng-template>
 
-<!-- 上傳照片 -->
+<!-- 顯示剪裁後的圖片 -->
 <div class="square">
   <div>
     <img [src]=' croppedImage' />
   </div>
+  <!-- 上傳照片 -->
   <div class="croppedimg">
     <input type="file" (change)="fileChangeEvent($event)" (click)="open(content)" />
   </div>
